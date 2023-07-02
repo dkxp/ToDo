@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Todo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script defer src="bundle.js"></script>
+    <!-- <link rel="stylesheet" href="style.css" /> -->
+  </head>
+  <body>
+    <div class="modal" id="modal">
+      <form id="edit-form" onsubmit="return false">
+        <input type="text" id="modal-info" placeholder="Your task" />
+        <input type="date" id="modal-date" />
+        <select name="task-urgency" id="modal-urgency">
+          <option value="urgent">urgent</option>
+          <option value="normal">normal</option>
+        </select>
+        <input type="button" id="modal-save" value="Save" />
+      </form>
+    </div>
+    <div id="overlay"></div>
+    <div class="container">
+      <h1>ToDo</h1>
+      <main>
+        <div id="folders">
+          <form id="form-folder" onsubmit="return false">
+            <input
+              type="text"
+              name="folder-name"
+              id="folder-name"
+              placeholder="Your new folder"
+            />
+            <input type="button" id="folder-create" value="Create new" />
+          </form>
+          <div class="card"></div>
+        </div>
+        <!-- div below was id='tasks' before -->
+        <div class="task-list">
+          <form id="task-inputs" onsubmit="return false">
+            <input
+              type="text"
+              name="task-description"
+              id="task-description"
+              placeholder="Your task"
+            />
+            <input type="date" required name="task-date" id="task-date" />
+            <select name="task-urgency" id="task-urgency">
+              <option value="urgent">urgent</option>
+              <option value="normal">normal</option>
+            </select>
+            <input type="button" id="task-create" value="+" />
+          </form>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
